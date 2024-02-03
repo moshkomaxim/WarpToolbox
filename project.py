@@ -181,10 +181,10 @@ def run_speedtest(platform):
     sys.exit("Invalid mode!")
 
   if platform == "Windows":
-    run_string = run_string.replace("./HOLDER", "warp_speed_test_windows.exe")
+    run_string = run_string.replace("./HOLDER", "speedtest_windows.exe")
   elif platform == "Linux" or platform == "Darwin":
-    subprocess.run(f"chmod +x warp_speed_test_{platform.lower()}", shell=True)
-    run_string = run_string.replace("HOLDER", f"warp_speed_test_{platform.lower()}")
+    subprocess.run(f"chmod +x speedtest_{platform.lower()}", shell=True)
+    run_string = run_string.replace("HOLDER", f"speedtest_{platform.lower()}")
 
   subprocess.run(run_string, shell=True)
 
